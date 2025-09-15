@@ -1,4 +1,4 @@
-const yourDate = new Date("2022-12-24T00:00:00"),
+const yourDate = new Date("2025-09-21T00:00:00"),
   music = ["myheart", "betifulinwhite", "mylove"];
 
 document.addEventListener(
@@ -6,13 +6,11 @@ document.addEventListener(
   function () {
     var rootTime = document.querySelector("time");
 
-    document.querySelector("anni").textContent = `${
-      yourDate.getDate() > 9 ? yourDate.getDate() : "0" + yourDate.getDate()
-    }-${
-      yourDate.getMonth() > 8
+    document.querySelector("anni").textContent = `${yourDate.getDate() > 9 ? yourDate.getDate() : "0" + yourDate.getDate()
+      }-${yourDate.getMonth() > 8
         ? yourDate.getMonth() + 1
         : "0" + (yourDate.getMonth() + 1)
-    }-${yourDate.getFullYear()}`;
+      }-${yourDate.getFullYear()}`;
 
     document.querySelector("date").textContent =
       Math.floor(Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24) +
@@ -23,9 +21,8 @@ document.addEventListener(
         hrs = Math.floor(Math.floor((today - yourDate) / 1000) / 60 / 60) % 24,
         min = Math.floor(Math.floor((today - yourDate) / 1000) / 60) % 60,
         sec = Math.floor((today - yourDate) / 1000) % 60;
-      rootTime.textContent = `${hrs > 9 ? hrs : "0" + hrs}:${
-        min > 9 ? min : "0" + min
-      }:${sec > 9 ? sec : "0" + sec}`;
+      rootTime.textContent = `${hrs > 9 ? hrs : "0" + hrs}:${min > 9 ? min : "0" + min
+        }:${sec > 9 ? sec : "0" + sec}`;
     }
     olock();
     var timer = setInterval(function () {
