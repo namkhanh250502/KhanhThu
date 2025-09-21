@@ -108,6 +108,16 @@ anni {
   text-align: center;
 }
 
+.one p {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.two p {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
 footer {
   grid-column: span 3;
   text-align: center;
